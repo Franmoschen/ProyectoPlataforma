@@ -10,7 +10,11 @@ public class Recolectar : MonoBehaviour
         {
             GetComponent<SpriteRenderer>().enabled = false;
             gameObject.transform.GetChild(0).gameObject.SetActive(true);
+
+            FindObjectOfType<GemaManager>().Gemas();
+            
             Destroy(gameObject, 0.5f);
+
         }
     }
 }
